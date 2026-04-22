@@ -1,0 +1,940 @@
+{
+  "generated_at": "2026-04-22 13:07:35",
+  "source": [
+    "https://www.irudek.com/en/cat/fall-arrest-protection/",
+    "https://www.irudek.com/en/cat/lifelines/"
+  ],
+  "total_codes": 186,
+  "items": {
+    "100102200051": {
+      "standard": "EN 355 | VG11.062",
+      "title": "ARIMA",
+      "slug": "arima-2"
+    },
+    "100110600003": {
+      "standard": "EN 355 I VG11.062 I VG11.063",
+      "title": "ASTUN WEBB I 150HL-DE",
+      "slug": "v-2025-astun-webb-i-de"
+    },
+    "100113200001": {
+      "standard": "EN 355",
+      "title": "ASTUN I 150 (361)",
+      "slug": "astun-i-150"
+    },
+    "100113200002": {
+      "standard": "EN 355 / EN 362 / TEST 140kg",
+      "title": "ASTUN I 140HSS (362)",
+      "slug": "astun-i-140hss-362"
+    },
+    "100113200003": {
+      "standard": "EN 355 / EN 362 / TEST 140kg / VG11.063",
+      "title": "ASTUN Y 180HSS (363)",
+      "slug": "astun-y-180-hss"
+    },
+    "100113200004": {
+      "standard": "EN 355 / EN 362 / TEST 140kg",
+      "title": "ASTUN I 100HSS (362)",
+      "slug": "astun-i-hss-362"
+    },
+    "100113200005": {
+      "standard": "EN 355 / EN 362 / TEST 140kg / VG11.063",
+      "title": "ASTUN Y 100HSS (363)",
+      "slug": "astun-y-100hss-363"
+    },
+    "100113200006": {
+      "standard": "EN 355 / EN 362 / TEST 140kg / VG11.063",
+      "title": "ASTUN Y 140HSS (363)",
+      "slug": "astun-y-140hss-363"
+    },
+    "100113200007": {
+      "standard": "EN 355 / EN 362 / TEST 140kg",
+      "title": "ASTUN I 140HSA (372)",
+      "slug": "astun-i-hsa-372"
+    },
+    "100113200009": {
+      "standard": "EN 355, EN 362, VG11.063",
+      "title": "ASTUN Y 180HSA (373)",
+      "slug": "astun-y-180hsa-373"
+    },
+    "100113200010": {
+      "standard": "EN 355, EN 362",
+      "title": "ASTUN FLEX I 180HSS (397)",
+      "slug": "astun-flex-i-180-397"
+    },
+    "100113200011": {
+      "standard": "EN 355, EN 362, VG11.063",
+      "title": "ASTUN FLEX Y 180HSS (398)",
+      "slug": "astun-flex-y-180-398"
+    },
+    "100113200012": {
+      "standard": "EN 355, EN 362, TEST 140kg",
+      "title": "ASTUN FLEX I 180HWA (382)",
+      "slug": "astun-flex-i-180-hsa-382"
+    },
+    "100113200013": {
+      "standard": "EN 355, EN 362, VG11.063",
+      "title": "ASTUN FLEX Y 180HWA (383)",
+      "slug": "astun-flex-y-180-hsa"
+    },
+    "100113200014": {
+      "standard": "EN 355 I VG11.062 I VG11.063",
+      "title": "ASTUN FLEX Y 180BHWA (383-BH)",
+      "slug": "v-2025-astun-flex-y-180bhwa"
+    },
+    "100113200016": {
+      "standard": "EN 355 / EN 362 / TEST 140kg",
+      "title": "ASTUN I 170CSS (361-C)",
+      "slug": "astun-i-170css"
+    },
+    "100206200007": {
+      "standard": "EN 795 B",
+      "title": "BIGA 12",
+      "slug": "v-2025-biga12"
+    },
+    "100307700027": {
+      "standard": "EN 360 | EN 362 | VG11.060",
+      "title": "MINIBLOK SE-H",
+      "slug": "miniblok-se-h"
+    },
+    "100307700035": {
+      "standard": "EN 360 | EN 362 | VG11.060",
+      "title": "MINIBLOK SE-C",
+      "slug": "miniblok-se-c"
+    },
+    "100307700041": {
+      "standard": "EN 360 | EN 362 | VG11.060",
+      "title": "TWINBLOK SE-C",
+      "slug": "twinblok-se-c"
+    },
+    "100307700042": {
+      "standard": "EN 360 | EN 362 | VG11.060",
+      "title": "TWINBLOK SE-H",
+      "slug": "twinblok-se-h"
+    },
+    "100307700068": {
+      "standard": "EN 360",
+      "title": "KARBOR 6",
+      "slug": "karbor-6"
+    },
+    "100307700088": {
+      "standard": "EN 360",
+      "title": "KARBOR 3.5",
+      "slug": "karbor-3-5"
+    },
+    "100307700156": {
+      "standard": "EN 360 | VG11.060 | VG11.062",
+      "title": "SEKURBLOK 15-SE",
+      "slug": "sekurblok-15-se"
+    },
+    "100307700157": {
+      "standard": "EN 360 | VG11.060 | VG11.062",
+      "title": "SEKURBLOK 20-SE",
+      "slug": "sekurblok-20-se"
+    },
+    "100307700171": {
+      "standard": "EN 360 | VG 11.060",
+      "title": "KARBOR 3.5 SE-H",
+      "slug": "karbor-3-5-se-h"
+    },
+    "100307700172": {
+      "standard": "EN 360 | VG11.060",
+      "title": "KARBOR 3.5 SE",
+      "slug": "karbor-3-5-se"
+    },
+    "100312000001": {
+      "standard": "EN 567",
+      "title": "SALVE",
+      "slug": "salve"
+    },
+    "100400600001": {
+      "standard": "EN 361 I EN 1149-1 I EN 1149-5 I EN ISO 80079-36 I EN ISO 80079-37 I Ex II 2G Ex h IIC T6 Gb",
+      "title": "AS1",
+      "slug": "as1"
+    },
+    "100403400034": {
+      "standard": "EN 361",
+      "title": "EXPERT 1",
+      "slug": "expert-1"
+    },
+    "100403400035": {
+      "standard": "EN 361",
+      "title": "EXPERT 1",
+      "slug": "expert-1"
+    },
+    "100403400036": {
+      "standard": "EN 361",
+      "title": "EXPERT 1 PRO",
+      "slug": "expert-1-pro"
+    },
+    "100403400037": {
+      "standard": "EN 361",
+      "title": "EXPERT 1 PRO",
+      "slug": "expert-1-pro"
+    },
+    "100403400038": {
+      "standard": "EN 361 | EN 358",
+      "title": "EXPERT 2",
+      "slug": "expert-2"
+    },
+    "100403400039": {
+      "standard": "EN 361 | EN 358",
+      "title": "EXPERT 2",
+      "slug": "expert-2"
+    },
+    "100403400040": {
+      "standard": "EN 361 | EN 358",
+      "title": "EXPERT 2 PRO",
+      "slug": "expert-2-pro"
+    },
+    "100403400041": {
+      "standard": "EN 361 | EN 358",
+      "title": "EXPERT 2 PRO",
+      "slug": "expert-2-pro"
+    },
+    "100403400042": {
+      "standard": "EN 361 I EN 358 I EN 813",
+      "title": "EXPERT 3 PRO",
+      "slug": "expert-3-pro"
+    },
+    "100403400043": {
+      "standard": "EN 361 I EN 358 I EN 813",
+      "title": "EXPERT 3 PRO",
+      "slug": "expert-3-pro"
+    },
+    "100403400044": {
+      "standard": "EN 361 I EN 358 I EN 813",
+      "title": "EXPERT 5 PRO",
+      "slug": "expert-5-pro"
+    },
+    "100403400045": {
+      "standard": "EN 361 I EN 358 I EN 813",
+      "title": "EXPERT 5 PRO",
+      "slug": "expert-5-pro"
+    },
+    "100403400046": {
+      "standard": "EN 361 I EN 358",
+      "title": "EXPERT 2 DE",
+      "slug": "expert-2-de"
+    },
+    "100403400047": {
+      "standard": "EN 361 I EN 358",
+      "title": "EXPERT 2 DE",
+      "slug": "expert-2-de"
+    },
+    "100404500052": {
+      "standard": "EN 358",
+      "title": "LIGHT P1",
+      "slug": "light-p1"
+    },
+    "100404500053": {
+      "standard": "EN 361",
+      "title": "LIGHT 1",
+      "slug": "light-1"
+    },
+    "100404500054": {
+      "standard": "EN 361",
+      "title": "LIGHT 2",
+      "slug": "light-2"
+    },
+    "100404500055": {
+      "standard": "EN 361",
+      "title": "LIGHT 2",
+      "slug": "light-2"
+    },
+    "100404500056": {
+      "standard": "EN 361",
+      "title": "LIGHT 2",
+      "slug": "light-2"
+    },
+    "100404500057": {
+      "standard": "EN 361",
+      "title": "LIGHT 3",
+      "slug": "light-3"
+    },
+    "100404500058": {
+      "standard": "EN 361 | EN 358",
+      "title": "LIGHT 4",
+      "slug": "light-4"
+    },
+    "100404500059": {
+      "standard": "EN 361 | EN 358",
+      "title": "LIGHT 4",
+      "slug": "light-4"
+    },
+    "100404500060": {
+      "standard": "EN 361 | EN 358",
+      "title": "LIGHT 4",
+      "slug": "light-4"
+    },
+    "100404500061": {
+      "standard": "EN 361 | EN 358",
+      "title": "LIGHT 5",
+      "slug": "v-2025-light-5"
+    },
+    "100404500063": {
+      "standard": "EN 361 | EN 1497",
+      "title": "LIGHT 14",
+      "slug": "v-2025-light-14"
+    },
+    "100404500074": {
+      "standard": "EN 361 | EN 358 | EN 813",
+      "title": "ZERO",
+      "slug": "zero"
+    },
+    "100404500075": {
+      "standard": "EN 361 | EN 358 | EN 813",
+      "title": "ZERO",
+      "slug": "zero"
+    },
+    "100409900005": {
+      "standard": "EN 361 | EN 358 | EN 813 | EN 1497",
+      "title": "WIND BLUE 3",
+      "slug": "wind-blue-3"
+    },
+    "100409900006": {
+      "standard": "EN 361 | EN 358 | EN 813 | EN 1497",
+      "title": "WIND BLUE 3",
+      "slug": "wind-blue-3"
+    },
+    "100409900012": {
+      "standard": "EN 361 | EN 1497",
+      "title": "WIND 1",
+      "slug": "wind-1"
+    },
+    "100409900013": {
+      "standard": "EN 361 | EN 1497",
+      "title": "WIND 1",
+      "slug": "wind-1"
+    },
+    "100409900014": {
+      "standard": "EN 361 | EN 1497",
+      "title": "WIND 1 PRO",
+      "slug": "wind-1-pro"
+    },
+    "100409900015": {
+      "standard": "EN 361 | EN 1497",
+      "title": "WIND 1 PRO",
+      "slug": "wind-1-pro"
+    },
+    "100409900016": {
+      "standard": "EN 361 | EN 358 | EN 1497",
+      "title": "WIND 2",
+      "slug": "wind-2"
+    },
+    "100409900017": {
+      "standard": "EN 361 | EN 358 | EN 1497",
+      "title": "WIND 2",
+      "slug": "wind-2"
+    },
+    "100409900018": {
+      "standard": "EN 361 | EN 358 | EN 1497",
+      "title": "WIND 2 PRO",
+      "slug": "66502"
+    },
+    "100409900019": {
+      "standard": "EN 361 | EN 358 | EN 1497",
+      "title": "WIND 2 PRO",
+      "slug": "66502"
+    },
+    "100409900024": {
+      "standard": "EN361 I EN 358 I EN 1497",
+      "title": "WIND 4 PRO",
+      "slug": "wind-4-pro"
+    },
+    "100409900025": {
+      "standard": "EN361 I EN 358 I EN 1497",
+      "title": "WIND 4 PRO",
+      "slug": "wind-4-pro"
+    },
+    "100411400003": {
+      "standard": "EN 361 | EN 358 | EN 813",
+      "title": "GRAVITY PLUS 1",
+      "slug": "gravity-1"
+    },
+    "100411400004": {
+      "standard": "EN 361 | EN 358 | EN 813",
+      "title": "GRAVITY PLUS 1",
+      "slug": "gravity-1"
+    },
+    "100424500001": {
+      "standard": "ANSI Z359.11",
+      "title": "KONDOR 1 ANSI",
+      "slug": "kondor-1-ansi"
+    },
+    "100424500002": {
+      "standard": "ANSI Z359.11",
+      "title": "KONDOR 2 ANSI",
+      "slug": "kondor-2-ansi"
+    },
+    "100424500003": {
+      "standard": "ANSI Z359.11",
+      "title": "KONDOR 3 ANSI",
+      "slug": "kondor-3-ansi"
+    },
+    "100513400002": {
+      "standard": "EN 12841-B | EN 567",
+      "title": "LIFT EVO",
+      "slug": "lift-evo"
+    },
+    "100513400006": {
+      "standard": "EN 367",
+      "title": "LIFT",
+      "slug": "lift"
+    },
+    "100908300001": {
+      "standard": "EN 361 I EN 362 I EN 355",
+      "title": "KIT APENINOS",
+      "slug": "apeninos"
+    },
+    "100908300005": {
+      "standard": "EN 361 I EN 362 I EN 355",
+      "title": "KIT ARALAR",
+      "slug": "aralar"
+    },
+    "100908300014": {
+      "standard": "EN 361 I EN 362 I EN 355",
+      "title": "KIT APENINOS",
+      "slug": "apeninos"
+    },
+    "100908300015": {
+      "standard": "EN 361 I EN 362 I EN 355",
+      "title": "KIT APENINOS",
+      "slug": "apeninos"
+    },
+    "100908300045": {
+      "standard": "EN 361 I EN 362 I EN 360 I EN 795B I EN 354",
+      "title": "KIT GARGANO",
+      "slug": "kit-gargano"
+    },
+    "100908300046": {
+      "standard": "EN 361 I EN 362 I EN 353-2 I EN 795B I EN 354",
+      "title": "KIT ULIA",
+      "slug": "kit-ulia"
+    },
+    "100908300047": {
+      "standard": "EN 361 I EN 362 I EN 353-2 I EN 795B I EN 354",
+      "title": "KIT ULIA",
+      "slug": "kit-ulia"
+    },
+    "100908300048": {
+      "standard": "EN 361 I EN 362 I EN 353-2 I EN 795B I EN 354",
+      "title": "KIT ULIA",
+      "slug": "kit-ulia"
+    },
+    "100908300049": {
+      "standard": "EN 361 I EN 362 I EN 355",
+      "title": "KIT ANBOTO",
+      "slug": "kit-anboto"
+    },
+    "100908300050": {
+      "standard": "EN 361 I EN 362 I EN 355",
+      "title": "KIT ANBOTO",
+      "slug": "kit-anboto"
+    },
+    "100908400001": {
+      "standard": "EN 361 I EN 362 I EN 354",
+      "title": "KIT DOLOMITAS LIGHT",
+      "slug": "dolomitas-light"
+    },
+    "100908400002": {
+      "standard": "EN 358 I EN 362 I EN 354",
+      "title": "KIT PIRINEOS LIGHT",
+      "slug": "pirineos-light"
+    },
+    "100908400004": {
+      "standard": "EN 361 I EN 362 I EN 354 I EN 358",
+      "title": "KIT TEIDE LIGHT",
+      "slug": "teide-light"
+    },
+    "100908400005": {
+      "standard": "EN 361 I EN 362 I EN 354",
+      "title": "KIT ROQUE NUBLO",
+      "slug": "roque-nublo"
+    },
+    "100908400008": {
+      "standard": "EN 361 I EN 362 I EN 354",
+      "title": "KIT HIMALAYA ECO",
+      "slug": "himalaya-eco"
+    },
+    "100908400010": {
+      "standard": "EN 361 I EN 362 I EN 354",
+      "title": "KIT ROQUE NUBLO",
+      "slug": "roque-nublo"
+    },
+    "100908400011": {
+      "standard": "EN 361 I EN 362 I EN 354",
+      "title": "KIT ROQUE NUBLO",
+      "slug": "roque-nublo"
+    },
+    "100908400012": {
+      "standard": "EN 361 I EN 362 I EN 354 I EN 358",
+      "title": "KIT TEIDE LIGHT",
+      "slug": "teide-light"
+    },
+    "100908400013": {
+      "standard": "EN 361 I EN 362 I EN 354 I EN 358",
+      "title": "KIT TEIDE LIGHT",
+      "slug": "teide-light"
+    },
+    "100908400018": {
+      "standard": "EN 361 I EN 362 I EN 354",
+      "title": "KIT ERNIO",
+      "slug": "kit-ernio"
+    },
+    "100908400019": {
+      "standard": "EN 361 I EN 362 I EN 355",
+      "title": "KIT ERNIO ABE",
+      "slug": "kit-ernio-abe"
+    },
+    "101007800118": {
+      "standard": "EN 1891A",
+      "title": "BOA ROLL 10,5mm",
+      "slug": "boa-roll-105m"
+    },
+    "101007800119": {
+      "standard": "EN 1891A",
+      "title": "BOA ROLL 10,5mm",
+      "slug": "boa-roll-105m"
+    },
+    "101007800135": {
+      "standard": "EN 1891A",
+      "title": "BOA BLUE ROLL 10,5mm",
+      "slug": "boa-blue-roll-105m"
+    },
+    "101007800136": {
+      "standard": "EN 1891A",
+      "title": "BOA BLUE ROLL 10,5mm",
+      "slug": "boa-blue-roll-105m"
+    },
+    "101007800152": {
+      "standard": "EN 1891A",
+      "title": "KONDA ROLL 11mm",
+      "slug": "konda-roll-11"
+    },
+    "101007800153": {
+      "standard": "EN 1891A",
+      "title": "KONDA ROLL 11mm",
+      "slug": "konda-roll-11"
+    },
+    "101007800176": {
+      "standard": "EN 795 A | EN 959-2",
+      "title": "GAKO 10",
+      "slug": "gako-10"
+    },
+    "101007800177": {
+      "standard": "EN 795 A | EN 959-2",
+      "title": "GAKO 12",
+      "slug": "gako-12"
+    },
+    "101102300001": {
+      "standard": "EN 12841-C",
+      "title": "D4",
+      "slug": "d4"
+    },
+    "101113300001": {
+      "standard": "EN 12841-C | EN 341 | EN 795-B",
+      "title": "ERO",
+      "slug": "ero"
+    },
+    "102300900001": {
+      "standard": "EN 362",
+      "title": "SILVERLIGHT 988",
+      "slug": "silverlight-988"
+    },
+    "102300900004": {
+      "standard": "EN 362 A",
+      "title": "STEELSAFE PINZA",
+      "slug": "steelsafe-clamp"
+    },
+    "102300900006": {
+      "standard": "EN 362 B",
+      "title": "SILVERLIGHT 1135",
+      "slug": "silverlight-1135-2"
+    },
+    "102300900009": {
+      "standard": "EN 362 A",
+      "title": "STEELSAFE PINZA",
+      "slug": "steelsafe-clamp"
+    },
+    "102300900010": {
+      "standard": "EN 362 A",
+      "title": "STEELSAFE PINZA",
+      "slug": "steelsafe-clamp"
+    },
+    "102300900011": {
+      "standard": "EN 362 T",
+      "title": "STEELSAFE 987",
+      "slug": "987"
+    },
+    "102300900016": {
+      "standard": "EN 362 B",
+      "title": "991 BLUE",
+      "slug": "991-blue"
+    },
+    "102300900018": {
+      "standard": "EN 362 B",
+      "title": "993 BLUE",
+      "slug": "993-blue"
+    },
+    "102300900020": {
+      "standard": "EN 362 T",
+      "title": "STEELSAFE 976",
+      "slug": "976"
+    },
+    "102300900031": {
+      "standard": "EN 362 T",
+      "title": "SILVERLIGHT 984 OPEN",
+      "slug": "silverlight-984-open"
+    },
+    "102300900032": {
+      "standard": "EN 362 A/T",
+      "title": "SILVERLIGHT 974 OPEN",
+      "slug": "silverlight-974-open"
+    },
+    "102300900033": {
+      "standard": "EN 362 T",
+      "title": "STEELSAFE 952",
+      "slug": "v-2025-steelsafe-952"
+    },
+    "102300900038": {
+      "standard": "EN 362 A/T",
+      "title": "STEELSAFE 39",
+      "slug": "steelsafe-39"
+    },
+    "102300900039": {
+      "standard": "EN 362 B",
+      "title": "STEELSAFE 981",
+      "slug": "steelsafe-981"
+    },
+    "102300900040": {
+      "standard": "EN 362 B",
+      "title": "STEELSAFE 989",
+      "slug": "989"
+    },
+    "102300900041": {
+      "standard": "EN 362 B",
+      "title": "STEELSAFE 982",
+      "slug": "982"
+    },
+    "102300900042": {
+      "standard": "EN 362",
+      "title": "SILVERLIGHT 984",
+      "slug": "silverlight-984"
+    },
+    "102300900044": {
+      "standard": "EN 362 B",
+      "title": "SILVERLIGHT 1131",
+      "slug": "silverlight-1131"
+    },
+    "102300900045": {
+      "standard": "EN 362 B",
+      "title": "SILVERLIGHT 990",
+      "slug": "silverlight-990"
+    },
+    "102300900047": {
+      "standard": "EN 362 B",
+      "title": "SILVERLIGHT 936",
+      "slug": "silverlight-936"
+    },
+    "102300900050": {
+      "standard": "EN 362 B",
+      "title": "STEELSAFE 981",
+      "slug": "steelsafe-981"
+    },
+    "102300900051": {
+      "standard": "EN 362 B",
+      "title": "STEELSAFE 982",
+      "slug": "982"
+    },
+    "102304800002": {
+      "standard": "EN 362 Q | EN 12275 Q | UIAA121 Q",
+      "title": "MAILLON OVAL LINK",
+      "slug": "maillon-oval-link"
+    },
+    "102304800003": {
+      "standard": "EN 362 Q | EN 12275 Q | UIAA121 Q",
+      "title": "MAILLON OVAL LINK",
+      "slug": "maillon-oval-link"
+    },
+    "102304800004": {
+      "standard": "EN 362 Q | EN 12275 Q | UIAA121 Q",
+      "title": "MAILLON OVAL LINK",
+      "slug": "maillon-oval-link"
+    },
+    "102304800005": {
+      "standard": "EN 362 Q | EN 12275 Q | UIAA121 Q",
+      "title": "MAILLON DELTA LINK",
+      "slug": "maillon-delta-link"
+    },
+    "102304800006": {
+      "standard": "EN 362 Q | EN 12275 Q | UIAA121 Q",
+      "title": "MAILLON DELTA LINK",
+      "slug": "maillon-delta-link"
+    },
+    "102304800007": {
+      "standard": "EN 362 Q | EN 12275 Q | UIAA121 Q",
+      "title": "MAILLON D-LINK",
+      "slug": "maillon-d-link"
+    },
+    "102304800008": {
+      "standard": "EN 362 Q | EN 12275 Q | UIAA121 Q",
+      "title": "MAILLON OVAL LINK INOX",
+      "slug": "maillon-oval-link-inox"
+    },
+    "102307300003": {
+      "standard": "EN 362 B",
+      "title": "STEELSAFE 308 INOX",
+      "slug": "steelsafe-308inox"
+    },
+    "102307300038": {
+      "standard": "EN 362 T",
+      "title": "SILVERLIGHT 901 SH",
+      "slug": "v-2025-silverlight-901-sh"
+    },
+    "102601300034": {
+      "standard": "EN 397",
+      "title": "OREKA",
+      "slug": "oreka"
+    },
+    "102601300035": {
+      "standard": "EN 397",
+      "title": "OREKA",
+      "slug": "oreka"
+    },
+    "102601300037": {
+      "standard": "EN 397",
+      "title": "OREKA",
+      "slug": "oreka"
+    },
+    "102601300038": {
+      "standard": "EN 397",
+      "title": "OREKA",
+      "slug": "oreka"
+    },
+    "102601300039": {
+      "standard": "EN 397",
+      "title": "OREKA",
+      "slug": "oreka"
+    },
+    "102601300059": {
+      "standard": "EN 397",
+      "title": "OREKA MIPS",
+      "slug": "oreka-mips"
+    },
+    "102601300060": {
+      "standard": "EN 397",
+      "title": "OREKA MIPS",
+      "slug": "oreka-mips"
+    },
+    "102601300062": {
+      "standard": "EN 397",
+      "title": "OREKA MIPS",
+      "slug": "oreka-mips"
+    },
+    "102601300063": {
+      "standard": "EN 397",
+      "title": "OREKA MIPS",
+      "slug": "oreka-mips"
+    },
+    "102601300064": {
+      "standard": "EN 397",
+      "title": "OREKA MIPS",
+      "slug": "oreka-mips"
+    },
+    "102601300067": {
+      "standard": "EN 397",
+      "title": "OREKA",
+      "slug": "oreka"
+    },
+    "102601300068": {
+      "standard": "EN 397",
+      "title": "OREKA MIPS",
+      "slug": "oreka-mips"
+    },
+    "102601300079": {
+      "standard": "EN 397 | EN 50365",
+      "title": "OREKA II",
+      "slug": "oreka-ii"
+    },
+    "102601300080": {
+      "standard": "EN 397 | EN 50365",
+      "title": "OREKA II",
+      "slug": "oreka-ii"
+    },
+    "102601300081": {
+      "standard": "EN 397 | EN 50365",
+      "title": "OREKA II",
+      "slug": "oreka-ii"
+    },
+    "102601300117": {
+      "standard": "EN 397 | EN 50365",
+      "title": "OREKA II MIPS",
+      "slug": "oreka-ii-mips"
+    },
+    "102601300118": {
+      "standard": "EN 397 | EN 50365",
+      "title": "OREKA II MIPS",
+      "slug": "oreka-ii-mips"
+    },
+    "102601300119": {
+      "standard": "EN 397 | EN 50365",
+      "title": "OREKA II MIPS",
+      "slug": "oreka-ii-mips"
+    },
+    "104304300001": {
+      "standard": "EN 354",
+      "title": "BOOMER",
+      "slug": "boomer"
+    },
+    "302601300001": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29",
+      "title": "SECRA-1",
+      "slug": "secra-1"
+    },
+    "302601300002": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29",
+      "title": "SECRA-1",
+      "slug": "secra-1"
+    },
+    "302601300004": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29",
+      "title": "SECRA-2 E6",
+      "slug": "secra-2-e6"
+    },
+    "302601300005": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29",
+      "title": "SECRA-2 E6",
+      "slug": "secra-2-e6"
+    },
+    "302601300006": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 300V",
+      "slug": "stilo-300v"
+    },
+    "302601300007": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 300V",
+      "slug": "stilo-300v"
+    },
+    "302601300008": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 300V",
+      "slug": "stilo-300v"
+    },
+    "302601300009": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 300V",
+      "slug": "stilo-300v"
+    },
+    "302601300010": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 300V",
+      "slug": "stilo-300v"
+    },
+    "302601300011": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 300V",
+      "slug": "stilo-300v"
+    },
+    "302601300012": {
+      "standard": "EN 397+A1 | EN 50365 | -30°C | 440V c.a.",
+      "title": "STILO 300",
+      "slug": "stilo-300"
+    },
+    "302601300013": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 600V",
+      "slug": "stilo-600v"
+    },
+    "302601300014": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 600V",
+      "slug": "stilo-600v"
+    },
+    "302601300015": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 600V",
+      "slug": "stilo-600v"
+    },
+    "302601300016": {
+      "standard": "EN 397 | EN 50365 | -30ºC",
+      "title": "STILO 600V",
+      "slug": "stilo-600v"
+    },
+    "302601300018": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29",
+      "title": "SECRA-1",
+      "slug": "secra-1"
+    },
+    "302601300019": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29",
+      "title": "SECRA-2 E6",
+      "slug": "secra-2-e6"
+    },
+    "302601300020": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29 | ASTM F2178/F2178M-20",
+      "title": "SECRA-2 E40",
+      "slug": "secra-2-e40"
+    },
+    "302601300021": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29 | ASTM F2178/F2178M-20",
+      "title": "SECRA-2 E40",
+      "slug": "secra-2-e40"
+    },
+    "302601300022": {
+      "standard": "EN 397+A1 | EN 50365 | ANSI/ISEA Z89.1 TIPO I | EN 166 | EN 170 | GS-ET-29 | ASTM F2178/F2178M-20",
+      "title": "SECRA-2 E40",
+      "slug": "secra-2-e40"
+    },
+    "302604000001": {
+      "standard": "EN 812:2012",
+      "title": "AIRCAP SP",
+      "slug": "aircap-sp"
+    },
+    "302604000002": {
+      "standard": "EN 812:2012",
+      "title": "AIRCAP SP",
+      "slug": "aircap-sp"
+    },
+    "302604000003": {
+      "standard": "EN 812:2012",
+      "title": "AIRCAP RP",
+      "slug": "aircap-rp"
+    },
+    "302604000004": {
+      "standard": "EN 812:2012",
+      "title": "AIRCAP RP",
+      "slug": "aircap-rp"
+    },
+    "302604000005": {
+      "standard": "EN 812:2012",
+      "title": "AIRCAP MP",
+      "slug": "aircap-mp"
+    },
+    "302604000006": {
+      "standard": "EN 812:2012",
+      "title": "AIRCAP MP",
+      "slug": "aircap-mp"
+    },
+    "302604000007": {
+      "standard": "EN 812:2012",
+      "title": "AIRCAP RP",
+      "slug": "aircap-rp"
+    },
+    "302604000010": {
+      "standard": "EN 812:2012",
+      "title": "AIRCAP RP",
+      "slug": "aircap-rp"
+    },
+    "402604300001": {
+      "standard": "EN 397 | EN 166 | EN 1731 | EN 352-3",
+      "title": "STILO FORESTRY KIT",
+      "slug": "kit-forestal"
+    },
+    "801206900071": {
+      "standard": "ATEX : II 1 G Ex ia IIC T4 Ga,CSA&UL: Classe 1, Zona 0, ex ia llC T4 Ga, IECEx: Ex ia llC T4 Ga",
+      "title": "DUO TRACER",
+      "slug": "duo-tracer"
+    }
+  }
+}

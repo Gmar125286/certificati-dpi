@@ -6,7 +6,7 @@ Account GitHub rilevato in questo ambiente:
 
 ## Stato attuale
 
-La cartella e pronta per essere pubblicata, ma da questo ambiente non posso creare direttamente il repository remoto perche:
+La cartella e pronta per essere pubblicata, ma da questo ambiente non posso creare direttamente il repository remoto perché:
 
 - `git` non e installato sul PC
 - `gh` non e installato sul PC
