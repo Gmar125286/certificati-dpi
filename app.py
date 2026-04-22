@@ -9,6 +9,7 @@ import secrets
 import shutil
 import sqlite3
 import subprocess
+import sys
 import threading
 import traceback
 from dataclasses import dataclass
@@ -29,7 +30,13 @@ from docx.text.paragraph import Paragraph
 from docx.oxml import OxmlElement
 
 
-BASE_DIR = Path(__file__).resolve().parent
+def application_base_dir() -> Path:
+    if getattr(sys, "frozen", False):
+        return Path(sys.executable).resolve().parent
+    return Path(__file__).resolve().parent
+
+
+BASE_DIR = application_base_dir()
 TEMPLATES_DIR = BASE_DIR
 OUTPUT_DIR = BASE_DIR / "output"
 DOCX_OUTPUT_DIR = OUTPUT_DIR / "docx"
@@ -41,7 +48,10 @@ SETTINGS_PATH = BASE_DIR / "settings.json"
 USERS_PATH = BASE_DIR / "users.json"
 IRUDEK_NORMS_PATH = BASE_DIR / "irudek_norme.json"
 ICON_PATH = BASE_DIR / "gestione_certificati_dpi.ico"
-DEFAULT_LOGO_PATH = BASE_DIR / "logo_azienda.jpg"
+DEFAULT_LOGO_CANDIDATES = [
+    BASE_DIR / "logo con scrittura .jpg",
+    BASE_DIR / "logo_azienda.jpg",
+]
 PASSWORD_ITERATIONS = 200000
 DEFAULT_ADMIN_USERNAME = "admin"
 DEFAULT_ADMIN_SALT = "6baf5c2a4f7e9d31b8c6e12a5d9f0b44"
@@ -98,7 +108,10 @@ def extract_checklist_items(template_path: Path) -> list[str]:
 
 
 def default_settings() -> dict:
-    return {"logo_path": str(DEFAULT_LOGO_PATH) if DEFAULT_LOGO_PATH.exists() else ""}
+    for candidate in DEFAULT_LOGO_CANDIDATES:
+        if candidate.exists():
+            return {"logo_path": str(candidate)}
+    return {"logo_path": ""}
 
 
 def current_datetime_display() -> str:
