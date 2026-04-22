@@ -1,0 +1,327 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-grid">
+  <section class="card form-card">
+    <div class="section-head">
+      <div>
+        <h2>{% if edit_id %}Modifica revisione{% else %}Nuovo certificato{% endif %}</h2>
+        <p class="muted">Compila i dati, genera il documento e mantieni lo storico allineato.</p>
+      </div>
+      <div class="badge-wrap">
+        <span class="badge">Catalogo: {{ catalog_codes }} codici</span>
+        {% if catalog_generated_at %}
+        <span class="badge subtle">Ultimo aggiornamento {{ catalog_generated_at }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <form method="post" action="{{ url_for('update_logo') }}" class="inline-panel">
+      <div class="field grow">
+        <label for="logo_path">Logo aziendale</label>
+        <input id="logo_path" type="text" name="logo_path" value="{{ settings.get('logo_path', '') }}">
+      </div>
+      <button type="submit" class="button secondary">Salva logo</button>
+    </form>
+
+    <div class="tool-panels">
+      <form method="post" action="{{ url_for('update_catalog') }}" class="inline-panel compact">
+        <div>
+          <h3>Aggiorna catalogo Irudek</h3>
+          <p class="muted">Aggiornamento solo manuale, eseguito quando serve.</p>
+        </div>
+        <button type="submit" class="button secondary">Aggiorna catalogo</button>
+      </form>
+
+      {% if is_admin %}
+      <form method="post" action="{{ url_for('create_user') }}" class="inline-panel compact">
+        <div class="field">
+          <label for="new_username">Nuovo utente</label>
+          <input id="new_username" type="text" name="username" required>
+        </div>
+        <div class="field">
+          <label for="new_password">Password</label>
+          <input id="new_password" type="password" name="password" required>
+        </div>
+        <div class="field">
+          <label for="confirm_password">Conferma password</label>
+          <input id="confirm_password" type="password" name="confirm_password" required>
+        </div>
+        <button type="submit" class="button secondary">Crea utente</button>
+      </form>
+      {% endif %}
+    </div>
+
+    <form method="post" action="{{ url_for('save_revision') }}" class="certificate-form" id="certificate-form">
+      <input type="hidden" name="edit_id" value="{{ edit_id }}">
+      <input type="hidden" name="action_name" id="action_name" value="generate">
+
+      <div class="form-grid">
+        <div class="field full">
+          <label for="template_name">Modello certificato</label>
+          <select name="template_name" id="template_name" required>
+            {% for template_name in templates %}
+            <option value="{{ template_name }}" {% if form_data.template_name == template_name %}selected{% endif %}>
+              {{ template_name }}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="cliente">Cliente</label>
+          <input id="cliente" name="cliente" list="recent-clients" value="{{ form_data.cliente }}" required>
+          <datalist id="recent-clients">
+            {% for client in recent_clients %}
+            <option value="{{ client }}"></option>
+            {% endfor %}
+          </datalist>
+        </div>
+
+        <div class="field">
+          <label for="modello_dispositivo">Modello dispositivo</label>
+          <input id="modello_dispositivo" name="modello_dispositivo" value="{{ form_data.modello_dispositivo }}" required>
+        </div>
+
+        <div class="field">
+          <label for="norma">Norma</label>
+          <input id="norma" name="norma" value="{{ form_data.norma }}">
+        </div>
+
+        <div class="field">
+          <label for="codice_sap">Codice SAP</label>
+          <div class="field-row">
+            <input id="codice_sap" name="codice_sap" value="{{ form_data.codice_sap }}">
+            <button type="button" class="button ghost" id="sap_lookup">Cerca SAP</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="lotto">Numero lotto</label>
+          <input id="lotto" name="lotto" value="{{ form_data.lotto }}">
+        </div>
+
+        <div class="field">
+          <label for="serie">Numero seriale</label>
+          <input id="serie" name="serie" value="{{ form_data.serie }}">
+        </div>
+
+        <div class="field">
+          <label for="anno_fabbricazione">Anno fabbricazione</label>
+          <input id="anno_fabbricazione" name="anno_fabbricazione" value="{{ form_data.anno_fabbricazione }}">
+        </div>
+
+        <div class="field">
+          <label for="data_revisione">Data revisione</label>
+          <input id="data_revisione" name="data_revisione" value="{{ form_data.data_revisione }}" required>
+        </div>
+
+        <div class="field">
+          <label for="data_prossima_revisione">Data prossima revisione</label>
+          <input id="data_prossima_revisione" name="data_prossima_revisione" value="{{ form_data.data_prossima_revisione }}">
+        </div>
+
+        <div class="field">
+          <label for="tecnico">Tecnico</label>
+          <input id="tecnico" name="tecnico" value="{{ form_data.tecnico }}" required>
+        </div>
+
+        <div class="field">
+          <label for="esito">Esito</label>
+          <select id="esito" name="esito">
+            <option value="Positivo" {% if form_data.esito == 'Positivo' %}selected{% endif %}>Positivo</option>
+            <option value="Negativo" {% if form_data.esito == 'Negativo' %}selected{% endif %}>Negativo</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="osservazioni">Osservazioni</label>
+          <textarea id="osservazioni" name="osservazioni" rows="6">{{ form_data.osservazioni }}</textarea>
+        </div>
+      </div>
+
+      <section class="checklist-card">
+        <div class="section-head small">
+          <div>
+            <h3>Scheda di controllo</h3>
+            <p class="muted">La lista si aggiorna in base al modello selezionato.</p>
+          </div>
+          <div class="checklist-actions">
+            <button type="button" class="button ghost" id="all_positive">Tutto positivo</button>
+            <button type="button" class="button ghost" id="all_negative">Tutto negativo</button>
+          </div>
+        </div>
+        <div id="checklist-container" class="checklist-list">
+          {% if checklist_items %}
+            {% for item in checklist_items %}
+            <div class="check-item">
+              <div class="check-text">{{ loop.index }}. {{ item }}</div>
+              <label><input type="radio" name="check_{{ loop.index0 }}" value="Positivo" {% if checklist_values[loop.index0] == 'Positivo' %}checked{% endif %}> Positivo</label>
+              <label><input type="radio" name="check_{{ loop.index0 }}" value="Negativo" {% if checklist_values[loop.index0] == 'Negativo' %}checked{% endif %}> Negativo</label>
+            </div>
+            {% endfor %}
+          {% else %}
+            <p class="muted" id="checklist-empty">Questo modello non contiene una scheda di controllo compilabile.</p>
+          {% endif %}
+        </div>
+      </section>
+
+      <div class="form-actions">
+        <label class="checkbox">
+          <input type="checkbox" name="export_pdf" {% if form_data.export_pdf %}checked{% endif %}>
+          <span>Esporta anche PDF</span>
+        </label>
+        <div class="action-buttons">
+          {% if edit_id %}
+          <a href="{{ url_for('dashboard') }}" class="button ghost">Annulla modifica</a>
+          {% endif %}
+          <button type="submit" class="button primary" data-action="generate">{% if edit_id %}Salva modifiche{% else %}Genera certificato{% endif %}</button>
+          <button type="submit" class="button accent" data-action="generate_print">{% if edit_id %}Salva modifiche e stampa 2 copie{% else %}Genera e stampa 2 copie{% endif %}</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="card history-card">
+    <div class="section-head">
+      <div>
+        <h2>Storico revisioni</h2>
+        <p class="muted">Ricerca per cliente, lotto, seriale o combinazioni come <strong>cliente&&seriale</strong>.</p>
+      </div>
+    </div>
+
+    <form method="get" action="{{ url_for('dashboard') }}" class="search-bar">
+      <input type="text" name="q" placeholder="Ricerca cliente / lotto / seriale" value="{{ search_query }}">
+      <button type="submit" class="button secondary">Cerca</button>
+      <a href="{{ url_for('dashboard') }}" class="button ghost">Reset</a>
+    </form>
+
+    <div class="table-wrap">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Creato il</th>
+            <th>Ultima modifica</th>
+            <th>Cliente</th>
+            <th>Modello</th>
+            <th>Seriale</th>
+            <th>Revisione</th>
+            <th>Esito</th>
+            <th>Azioni</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in history_rows %}
+          <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.created_at }}</td>
+            <td>{{ row.updated_at }}</td>
+            <td>{{ row.cliente }}</td>
+            <td>{{ row.modello }}</td>
+            <td>{{ row.seriale }}</td>
+            <td>{{ row.data_revisione }}</td>
+            <td><span class="result {{ row.esito|lower }}">{{ row.esito }}</span></td>
+            <td class="actions">
+              <a href="{{ url_for('dashboard', edit=row.id) }}" class="button ghost small">Modifica</a>
+              {% if row.has_pdf %}
+              <a href="{{ url_for('download_record_file', file_kind='pdf', record_id=row.id) }}" class="button ghost small" target="_blank">PDF</a>
+              {% endif %}
+              {% if row.has_docx %}
+              <a href="{{ url_for('download_record_file', file_kind='docx', record_id=row.id) }}" class="button ghost small" target="_blank">DOCX</a>
+              {% endif %}
+              <form method="post" action="{{ url_for('delete_revision', record_id=row.id) }}" onsubmit="return confirm('Eliminare la revisione {{ row.id }}?');">
+                <button type="submit" class="button danger small">Elimina</button>
+              </form>
+            </td>
+          </tr>
+          {% else %}
+          <tr>
+            <td colspan="9" class="empty-row">Nessuna revisione trovata.</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<script>
+  const templateSelect = document.getElementById("template_name");
+  const modelInput = document.getElementById("modello_dispositivo");
+  const esitoSelect = document.getElementById("esito");
+  const checklistContainer = document.getElementById("checklist-container");
+  const actionNameInput = document.getElementById("action_name");
+
+  function syncModelFromTemplate() {
+    const raw = templateSelect.value || "";
+    const text = raw.replace("CERTIFICATO DI REVISIONE - ", "").replace(".docx", "").trim();
+    if (!modelInput.dataset.manuallyEdited || modelInput.value.trim() === "" || modelInput.value.trim() === modelInput.dataset.lastTemplateName) {
+      modelInput.value = text;
+    }
+    modelInput.dataset.lastTemplateName = text;
+  }
+
+  async function refreshChecklist() {
+    const params = new URLSearchParams({
+      template_name: templateSelect.value,
+      esito: esitoSelect.value
+    });
+    const response = await fetch(`{{ url_for('api_checklist') }}?${params.toString()}`);
+    const data = await response.json();
+    checklistContainer.innerHTML = "";
+    if (!data.items.length) {
+      checklistContainer.innerHTML = '<p class="muted" id="checklist-empty">Questo modello non contiene una scheda di controllo compilabile.</p>';
+      return;
+    }
+    data.items.forEach((item, index) => {
+      const row = document.createElement("div");
+      row.className = "check-item";
+      row.innerHTML = `
+        <div class="check-text">${index + 1}. ${item}</div>
+        <label><input type="radio" name="check_${index}" value="Positivo" ${data.defaults[index] === "Positivo" ? "checked" : ""}> Positivo</label>
+        <label><input type="radio" name="check_${index}" value="Negativo" ${data.defaults[index] === "Negativo" ? "checked" : ""}> Negativo</label>
+      `;
+      checklistContainer.appendChild(row);
+    });
+  }
+
+  async function lookupSap() {
+    const code = document.getElementById("codice_sap").value.trim();
+    if (!code) return;
+    const response = await fetch(`{{ url_for('api_lookup_sap') }}?code=${encodeURIComponent(code)}`);
+    const data = await response.json();
+    if (!data.found) return;
+    document.getElementById("norma").value = data.standard || "";
+    if (data.title) {
+      modelInput.value = data.title;
+    }
+  }
+
+  function setAllChecklist(value) {
+    checklistContainer.querySelectorAll('input[type="radio"]').forEach((input) => {
+      if (input.value === value) {
+        input.checked = true;
+      }
+    });
+  }
+
+  templateSelect.addEventListener("change", async () => {
+    syncModelFromTemplate();
+    await refreshChecklist();
+  });
+  esitoSelect.addEventListener("change", refreshChecklist);
+  modelInput.addEventListener("input", () => {
+    modelInput.dataset.manuallyEdited = "1";
+  });
+  document.getElementById("sap_lookup").addEventListener("click", lookupSap);
+  document.getElementById("all_positive").addEventListener("click", () => setAllChecklist("Positivo"));
+  document.getElementById("all_negative").addEventListener("click", () => setAllChecklist("Negativo"));
+
+  document.querySelectorAll("[data-action]").forEach((button) => {
+    button.addEventListener("click", () => {
+      actionNameInput.value = button.dataset.action;
+    });
+  });
+</script>
+{% endblock %}

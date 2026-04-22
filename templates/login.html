@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="login-shell">
+  <form method="post" class="card login-card">
+    <h2>Accesso applicazione</h2>
+    <label>
+      <span>Utente</span>
+      <input type="text" name="username" autocomplete="username" required>
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" name="password" autocomplete="current-password" required>
+    </label>
+    <button type="submit" class="button primary wide">Accedi</button>
+    <p class="muted">Utente iniziale: <strong>admin</strong> - Password iniziale: <strong>admin</strong></p>
+  </form>
+</section>
+{% endblock %}
