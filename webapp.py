@@ -571,6 +571,6 @@ def ensure_runtime_dirs() -> None:
 
 if __name__ == "__main__":
     ensure_runtime_dirs()
-    host = os.getenv("HOST", "127.0.0.1")
-    port = int(os.getenv("PORT", "5000"))
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", "3000"))
     app.run(host=host, port=port, debug=False)
