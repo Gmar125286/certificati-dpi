@@ -80,9 +80,36 @@ Il progetto ora e' preparato anche per essere pubblicato come web app pubblica.
 File pronti per il deploy:
 
 - `webapp.py`: backend Flask
+- `.replit`: configurazione run/deploy per Replit
 - `Dockerfile`: ambiente server con LibreOffice per export PDF
 - `render.yaml`: configurazione Render con web service e disco persistente
 - `.dockerignore`: esclusione dei file locali non da pubblicare
+
+### Replit
+
+Per usare Replit puoi importare direttamente la repository pubblica:
+
+```text
+https://replit.com/github.com/Gmar125286/certificati-dpi
+```
+
+Documentazione ufficiale Replit usata per questa configurazione:
+
+- Import da GitHub: https://docs.replit.com/getting-started/quickstarts/import-from-github
+- Configurazione `.replit`: https://docs.replit.com/replit-app/configuration
+- Deployments: https://docs.replit.com/cloud-services/deployments/about-deployments
+- Custom domains: https://docs.replit.com/cloud-services/deployments/custom-domains
+
+Flusso consigliato:
+
+1. importa la repo su Replit
+2. verifica che il progetto parta con `Run`
+3. apri `Deployments`
+4. crea un deployment `Autoscale` oppure `Reserved VM`
+5. usa il comando di deploy gia pronto nel file `.replit`
+6. al termine ottieni un link pubblico tipo `https://nome-app.replit.app`
+
+Poi, se vuoi, puoi collegare anche un dominio personalizzato dal pannello Replit.
 
 ### Render
 
