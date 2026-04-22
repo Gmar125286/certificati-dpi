@@ -1,7 +1,8 @@
 from __future__ import annotations
 
-import secrets
 import json
+import os
+import secrets
 from functools import wraps
 from pathlib import Path
 
@@ -21,6 +22,7 @@ from flask import (
 from app import (
     ASSETS_OUTPUT_DIR,
     DEFAULT_ADMIN_USERNAME,
+    DB_PATH,
     DOCX_OUTPUT_DIR,
     ICON_PATH,
     IRUDEK_NORMS_PATH,
@@ -43,10 +45,6 @@ from app import (
     normalize_username,
     template_files,
 )
-
-
-BASE_DIR = Path(__file__).resolve().parent
-DB_PATH = BASE_DIR / "storico_revisioni.db"
 
 app = Flask(__name__)
 
@@ -559,6 +557,11 @@ def favicon():
     return Response(status=404)
 
 
+@app.route("/healthz")
+def healthz():
+    return jsonify({"status": "ok"})
+
+
 def ensure_runtime_dirs() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     DOCX_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -568,4 +571,6 @@ def ensure_runtime_dirs() -> None:
 
 if __name__ == "__main__":
     ensure_runtime_dirs()
-    app.run(host="127.0.0.1", port=5000, debug=False)
+    host = os.getenv("HOST", "127.0.0.1")
+    port = int(os.getenv("PORT", "5000"))
+    app.run(host=host, port=port, debug=False)

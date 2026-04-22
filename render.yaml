@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: gestione-certificati-dpi
+    runtime: docker
+    repo: https://github.com/Gmar125286/certificati-dpi
+    plan: starter
+    autoDeploy: true
+    healthCheckPath: /healthz
+    disk:
+      name: certificati-data
+      mountPath: /opt/app/data
+      sizeGB: 1

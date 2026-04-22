@@ -73,6 +73,43 @@ cd "C:\Users\banco\Desktop\CERTIFICATI"
 python webapp.py
 ```
 
+## Pubblicazione online
+
+Il progetto ora e' preparato anche per essere pubblicato come web app pubblica.
+
+File pronti per il deploy:
+
+- `webapp.py`: backend Flask
+- `Dockerfile`: ambiente server con LibreOffice per export PDF
+- `render.yaml`: configurazione Render con web service e disco persistente
+- `.dockerignore`: esclusione dei file locali non da pubblicare
+
+### Render
+
+La strada piu semplice per ottenere un link pubblico e':
+
+1. aprire la repo GitHub pubblica
+2. creare un nuovo servizio su Render collegando la repo
+3. usare il `render.yaml` gia presente
+4. lasciare il mount del disco su `/opt/app/data`
+5. attendere il deploy
+
+Al termine Render assegna un URL pubblico tipo:
+
+```text
+https://gestione-certificati-dpi.onrender.com
+```
+
+Poi puoi associare anche un dominio personalizzato dal pannello Render.
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Gmar125286/certificati-dpi)
+
+### Note per la versione online
+
+- i dati applicativi (`storico_revisioni.db`, `users.json`, `settings.json`, output generati) vengono salvati nella cartella dati persistente del server
+- la stampa diretta di 2 copie resta pensata per ambiente Windows locale
+- l'export PDF lato server usa LibreOffice invece di Microsoft Word
+
 ## Login iniziale
 
 Utente amministratore predefinito:

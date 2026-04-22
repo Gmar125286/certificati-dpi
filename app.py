@@ -18,8 +18,14 @@ from pathlib import Path
 from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 
-import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
+try:
+    import tkinter as tk
+    from tkinter import filedialog, messagebox, ttk
+except Exception:  # pragma: no cover - optional in server environments
+    tk = None
+    filedialog = None
+    messagebox = None
+    ttk = None
 from PIL import Image, ImageDraw, ImageFont
 
 from docx import Document
@@ -36,16 +42,26 @@ def application_base_dir() -> Path:
     return Path(__file__).resolve().parent
 
 
+def application_data_dir() -> Path:
+    configured = os.getenv("DATA_DIR", "").strip()
+    if configured:
+        path = Path(configured).expanduser()
+        path.mkdir(parents=True, exist_ok=True)
+        return path
+    return application_base_dir()
+
+
 BASE_DIR = application_base_dir()
+DATA_DIR = application_data_dir()
 TEMPLATES_DIR = BASE_DIR
-OUTPUT_DIR = BASE_DIR / "output"
+OUTPUT_DIR = DATA_DIR / "output"
 DOCX_OUTPUT_DIR = OUTPUT_DIR / "docx"
 PDF_OUTPUT_DIR = OUTPUT_DIR / "pdf"
 ASSETS_OUTPUT_DIR = OUTPUT_DIR / "assets"
 LOG_PATH = OUTPUT_DIR / "error.log"
-DB_PATH = BASE_DIR / "storico_revisioni.db"
-SETTINGS_PATH = BASE_DIR / "settings.json"
-USERS_PATH = BASE_DIR / "users.json"
+DB_PATH = DATA_DIR / "storico_revisioni.db"
+SETTINGS_PATH = DATA_DIR / "settings.json"
+USERS_PATH = DATA_DIR / "users.json"
 IRUDEK_NORMS_PATH = BASE_DIR / "irudek_norme.json"
 ICON_PATH = BASE_DIR / "gestione_certificati_dpi.ico"
 DEFAULT_LOGO_CANDIDATES = [
@@ -766,6 +782,8 @@ class CertificateGenerator:
         return docx_path, pdf_path, pdf_error
 
     def print_document(self, docx_path: Path, copies: int = 2) -> None:
+        if os.name != "nt":
+            raise RuntimeError("La stampa diretta e disponibile solo su Windows.")
         escaped_docx = str(docx_path).replace("'", "''")
         copies = max(1, int(copies))
         command = f"""
@@ -934,6 +952,9 @@ try {{
                 return
 
     def _convert_to_pdf(self, docx_path: Path, pdf_path: Path) -> None:
+        if os.name != "nt":
+            self._convert_to_pdf_with_libreoffice(docx_path, pdf_path)
+            return
         escaped_docx = str(docx_path).replace("'", "''")
         escaped_pdf = str(pdf_path).replace("'", "''")
         command = f"""
@@ -976,8 +997,35 @@ try {{
 
         raise RuntimeError(f"Esportazione PDF non riuscita. {last_error}")
 
+    def _convert_to_pdf_with_libreoffice(self, docx_path: Path, pdf_path: Path) -> None:
+        soffice = shutil.which("soffice") or shutil.which("libreoffice")
+        if not soffice:
+            raise RuntimeError("LibreOffice non disponibile sul server per creare il PDF.")
 
-class RevisionApp(tk.Tk):
+        output_dir = pdf_path.parent
+        output_dir.mkdir(parents=True, exist_ok=True)
+        completed = subprocess.run(
+            [
+                soffice,
+                "--headless",
+                "--convert-to",
+                "pdf",
+                "--outdir",
+                str(output_dir),
+                str(docx_path),
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        generated_path = output_dir / f"{docx_path.stem}.pdf"
+        if completed.returncode != 0 or not generated_path.exists():
+            raise RuntimeError(completed.stderr.strip() or completed.stdout.strip() or "PDF non creato.")
+        if generated_path != pdf_path:
+            shutil.move(str(generated_path), str(pdf_path))
+
+
+class RevisionApp(tk.Tk if tk is not None else object):
     def __init__(self) -> None:
         super().__init__()
         self.title("Gestione Certificati DPI")
@@ -2123,6 +2171,9 @@ def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     DOCX_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     PDF_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    if tk is None:
+        raise RuntimeError("Tkinter non disponibile in questo ambiente.")
 
     app = RevisionApp()
     if not app.is_authenticated:

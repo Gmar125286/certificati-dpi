@@ -1,0 +1,14 @@
+__pycache__/
+build/
+dist/
+release/
+output/
+.git/
+*.pyc
+*.pyo
+*.pyd
+settings.json
+users.json
+storico_revisioni.db
+timbro_firma.jpeg
+timbro_firma_clean.png
