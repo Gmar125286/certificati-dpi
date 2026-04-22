@@ -83,8 +83,34 @@ File pronti per il deploy:
 - `.replit`: configurazione run/deploy per Replit
 - `railway.json`: healthcheck e restart policy per Railway
 - `Dockerfile`: ambiente server con LibreOffice per export PDF
+- `docker-compose.oracle.yml`: avvio web app su VM Oracle
+- `oracle_setup.sh`: script rapido di installazione su Ubuntu Oracle
+- `ORACLE_DEPLOY.md`: guida completa deploy Oracle Cloud
 - `render.yaml`: configurazione Render con web service e disco persistente
 - `.dockerignore`: esclusione dei file locali non da pubblicare
+
+### Oracle Cloud Always Free
+
+Per il tuo caso questa e' la migliore opzione gratuita trovata, perche' offre VM e storage persistente veri.
+
+Documentazione ufficiale Oracle usata:
+
+- Always Free resources: https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm
+- Pubblicare un webserver accessibile da Internet: https://docs.oracle.com/en/learn/publish-webserver-using-oci/
+
+Passaggi rapidi:
+
+1. crea una VM Ubuntu `Always Free`
+2. assegna una `Public IP`
+3. apri in ingress le porte `22`, `80` e `443`
+4. entra in SSH
+5. clona la repo
+6. esegui `./oracle_setup.sh`
+7. apri l'app su `http://IP_PUBBLICO_VM`
+
+Guida completa:
+
+- `ORACLE_DEPLOY.md`
 
 ### Railway
 

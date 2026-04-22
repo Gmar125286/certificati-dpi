@@ -1,0 +1,13 @@
+services:
+  certificati-web:
+    build: .
+    container_name: gestione-certificati-dpi
+    restart: unless-stopped
+    environment:
+      HOST: 0.0.0.0
+      PORT: 10000
+      DATA_DIR: /data
+    ports:
+      - "80:10000"
+    volumes:
+      - ./oracle-data:/data
