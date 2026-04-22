@@ -43,7 +43,7 @@ def application_base_dir() -> Path:
 
 
 def application_data_dir() -> Path:
-    configured = os.getenv("DATA_DIR", "").strip()
+    configured = os.getenv("DATA_DIR", "").strip() or os.getenv("RAILWAY_VOLUME_MOUNT_PATH", "").strip()
     if configured:
         path = Path(configured).expanduser()
         path.mkdir(parents=True, exist_ok=True)

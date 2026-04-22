@@ -81,9 +81,41 @@ File pronti per il deploy:
 
 - `webapp.py`: backend Flask
 - `.replit`: configurazione run/deploy per Replit
+- `railway.json`: healthcheck e restart policy per Railway
 - `Dockerfile`: ambiente server con LibreOffice per export PDF
 - `render.yaml`: configurazione Render con web service e disco persistente
 - `.dockerignore`: esclusione dei file locali non da pubblicare
+
+### Railway
+
+Per usare Railway puoi partire direttamente dalla repository GitHub pubblica.
+
+Documentazione ufficiale Railway usata per questa configurazione:
+
+- Deploy Flask: https://docs.railway.com/guides/flask
+- Config as code: https://docs.railway.com/config-as-code/reference
+- Start command: https://docs.railway.com/deployments/start-command
+- Volumi persistenti: https://docs.railway.com/guides/volumes
+- Domini pubblici e custom: https://docs.railway.com/networking/domains/working-with-domains
+
+Flusso consigliato:
+
+1. crea un nuovo progetto su Railway
+2. scegli `Deploy from GitHub repo`
+3. collega `Gmar125286/certificati-dpi`
+4. lascia che Railway usi il `Dockerfile` presente
+5. dopo il primo deploy aggiungi un `Volume` al servizio
+6. monta il volume, per esempio su `/data`
+7. imposta la variabile `DATA_DIR=/data` se Railway non la compila da solo
+8. nella sezione networking genera il dominio pubblico `*.up.railway.app`
+
+Alla fine ottieni un link pubblico tipo:
+
+```text
+https://gestione-certificati-dpi.up.railway.app
+```
+
+Poi puoi aggiungere anche un dominio personalizzato dal pannello Domains.
 
 ### Replit
 
